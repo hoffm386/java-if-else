@@ -334,11 +334,6 @@ else System.out.println("Valid input!");
 
 
 ```Java
-System.out.println("hello!");
-```
-
-
-```Java
 if (userInput < lower) {
     System.out.println("Input too small");
 } else if (userInput > upper) {

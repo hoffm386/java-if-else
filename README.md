@@ -12,12 +12,9 @@ Before this lesson, students should already be able to:
 * Use ***expressions*** to manipulate and combine variables
 * Follow the appropriate ***order of operations*** in Java expressions, including math operations
 
----
-
 ## Learning Objectives
 
 By the end of this lesson, students will be able to:
-
 * Define the term ***control flow*** and explain why it is a useful tool in programming
 * Describe the two values of the ***boolean*** data type in Java
 * Apply ***operators*** to variables in order to form ***boolean expressions***
@@ -25,19 +22,15 @@ By the end of this lesson, students will be able to:
 * Practice translating English-language word problems into conditional statements and code blocks
 
 
----
-
 ## The Motivation: Control Flow
 
 When do we need control flow?
 
-<img src="images/workflow.png" alt="three shapes with arrows going from the first to the second to the third" style="width: 40%">
+<img src="images/workflow.png" alt="three shapes with arrows going from the first to the second to the third" style="width: 20%">
 
-<a href="https://www.flaticon.com/free-icons/workflow" title="workflow icons">Workflow icons created by Uniconlabs - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/workflow" title="workflow icons"><small>Workflow icons created by Uniconlabs - Flaticon</small></a>
 
 A better question might be...when do we **not** need control flow?
-
----
 
 ## The Boolean Data Type
 
@@ -49,75 +42,53 @@ Some data types you have seen already include:
 
 
 ```Java
+// Declaring and assigning variable
 int month = 12;
 ```
 
 
 ```Java
-month
+// Printing variable value
+System.out.println(month);
 ```
-
-
-
-
-    12
-
-
 
 
 ```Java
-month - 2
+// Performing math operation on variable
+System.out.println(month - 2);
 ```
-
-
-
-
-    10
-
-
 
 
 ```Java
-(month - 2) % 2
+// Performing multiple math operations, with parentheses for order of operations
+System.out.println((month - 2) % 2);
 ```
-
-
-
-
-    0
-
-
 
 #### Doubles
 
 
 ```Java
+// Declaring and assigning variable
 double length = 1.5;
 ```
 
 
 ```Java
-length
+// Printing variable value
+System.out.println(length);
 ```
-
-
-
-
-    1.5
-
-
 
 
 ```Java
-length * 7
+// Performing math operation on variable
+System.out.println(length * 7);
 ```
 
 
-
-
-    10.5
-
-
+```Java
+// Performing multiple math operations, with parentheses for order of operations
+System.out.println(10 / (length + 0.5));
+```
 
 #### Boolean is another data type
 
@@ -132,13 +103,6 @@ isSunny
 ```
 
 
-
-
-    true
-
-
-
-
 ```Java
 boolean isRaining = false;
 ```
@@ -147,15 +111,6 @@ boolean isRaining = false;
 ```Java
 isRaining
 ```
-
-
-
-
-    false
-
-
-
----
 
 <details>
     <summary style="cursor: pointer;">Clarification (click to expand)</summary>
@@ -168,8 +123,6 @@ isRaining
 * A ***data type*** is something like `int` or `double`, which defines the "kind of thing" being stored in a variable
 * You have just been introduced to a data type called `boolean`
 * It can only have two values: `true` or `false`
-
----
 
 Ok but...why?
 
@@ -192,13 +145,6 @@ int upper = 100;
 5 == lower
 ```
 
-
-
-
-    false
-
-
-
 *Is the maximum 100?*
 
 
@@ -206,26 +152,12 @@ int upper = 100;
 upper == 100
 ```
 
-
-
-
-    true
-
-
-
 *Are the minimum and maximum the same?*
 
 
 ```Java
 lower == upper
 ```
-
-
-
-
-    false
-
-
 
 ### Not
 
@@ -237,23 +169,9 @@ lower == upper
 ```
 
 
-
-
-    true
-
-
-
-
 ```Java
 5 != lower
 ```
-
-
-
-
-    true
-
-
 
 ### Greater Than, Less Than
 
@@ -264,13 +182,6 @@ lower == upper
 50 > lower
 ```
 
-
-
-
-    true
-
-
-
 *Is it less than the maximum?*
 
 
@@ -278,26 +189,12 @@ lower == upper
 50 < upper
 ```
 
-
-
-
-    true
-
-
-
 *Now the user has input 100. Is that less than the maximum?*
 
 
 ```Java
 100 < upper
 ```
-
-
-
-
-    false
-
-
 
 ### Greater Than Or Equal To, Less Than Or Equal To
 
@@ -309,23 +206,9 @@ lower == upper
 ```
 
 
-
-
-    true
-
-
-
-
 ```Java
 100 <= upper
 ```
-
-
-
-
-    true
-
-
 
 ### And and Or
 
@@ -339,35 +222,14 @@ lower == upper
 ```
 
 
-
-
-    true
-
-
-
-
 ```Java
 (lower <= 500) && (500 <= upper)
 ```
 
 
-
-
-    false
-
-
-
-
 ```Java
 (lower <= -5) && (-5 <= lower)
 ```
-
-
-
-
-    false
-
-
 
 #### Or
 
@@ -379,37 +241,14 @@ lower == upper
 ```
 
 
-
-
-    true
-
-
-
-
 ```Java
 (500 <= lower) || (upper <= 500)
 ```
 
 
-
-
-    true
-
-
-
-
 ```Java
 (-5 <= lower) || (upper <= -5)
 ```
-
-
-
-
-    true
-
-
-
----
 
 ### Boolean Operators and Expressions Recap
 
@@ -424,18 +263,14 @@ lower == upper
   * `&&` (and)
   * `||` (or)
   * `!` (not)
-  
----
 
 ## Conditional Statements
 
 Now we can finally start to implement control flow!
 
-<img src="images/flowchart.png" alt="flowchart" style="width: 40%">
+<img src="images/flowchart.png" alt="flowchart" style="width: 20%">
 
-<a href="https://www.flaticon.com/free-icons/process" title="process icons">Process icons created by Uniconlabs - Flaticon</a>
-
----
+<a href="https://www.flaticon.com/free-icons/process" title="process icons"><small>Process icons created by Uniconlabs - Flaticon</small></a>
 
 ### `if`
 
@@ -451,9 +286,6 @@ int userInput = -5;
 if (userInput < lower) System.out.println("Input too small");
 ```
 
-    Input too small
-
-
 ### `else if`
 
 *User input is also invalid if it's larger than the maximum.*
@@ -463,9 +295,6 @@ if (userInput < lower) System.out.println("Input too small");
 if (userInput < lower) System.out.println("Input too small");
 else if (userInput > upper) System.out.println("Input too big");
 ```
-
-    Input too small
-
 
 
 ```Java
@@ -478,9 +307,6 @@ if (userInput < lower) System.out.println("Input too small");
 else if (userInput > upper) System.out.println("Input too big");
 ```
 
-    Input too big
-
-
 ### `else`
 
 *Otherwise, user input is valid.*
@@ -491,9 +317,6 @@ if (userInput < lower) System.out.println("Input too small");
 else if (userInput > upper) System.out.println("Input too big");
 else System.out.println("Valid input!");
 ```
-
-    Input too big
-
 
 
 ```Java
@@ -507,12 +330,12 @@ else if (userInput > upper) System.out.println("Input too big");
 else System.out.println("Valid input!");
 ```
 
-    Valid input!
-
-
----
-
 ### Code Blocks: The Dreaded Curly Braces
+
+
+```Java
+System.out.println("hello!");
+```
 
 
 ```Java
@@ -525,16 +348,11 @@ if (userInput < lower) {
 }
 ```
 
-    Valid input!
-
-
 ### Conditional Statements Recap
 
 * A ***conditional statement*** = a boolean expression + `if`, `else if`, or `else` keyword
 * Conditional statements determine whether a given piece of code will be executed
 * Typically this code is contained in a ***code block*** surrounded by curly braces
-
----
 
 ## Practice
 
@@ -549,10 +367,16 @@ It goes like this:
 
 
 ```Java
-
+// Given a number, print it out
+// Except if the number is divisible by 3, print out "Fizz" instead
+// And if the number is divisible by 5, print out "Buzz" instead
+// Finally, if the number is divisible by both 3 and 5, print out "FizzBuzz" instead
 ```
 
----
+
+```Java
+
+```
 
 ## Recap
 
